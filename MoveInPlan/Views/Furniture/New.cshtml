@@ -1,0 +1,8 @@
+<h1>Add a new item to @Model.Name</h1>
+
+<form action="/rooms/@Model.Id/furniture" method="post">
+  <input id="furnitureId" name="furnitureId" type="hidden" value="@Model.Id">
+  <label for="furnitureName">Furniture Description</label>
+  <input id="furnitureName" name="furnitureName" type="text">
+  <button type='submit'>Add Furniture</button>
+</form>

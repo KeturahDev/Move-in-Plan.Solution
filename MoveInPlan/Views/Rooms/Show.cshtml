@@ -1,14 +1,14 @@
-<!-- @using MoveInPlan.Models;
+@using MoveInPlan.Models;
 
 <h3>Here are all the furniture in this room:</h3>
 
 <ol>
-@foreach (Item item in @Model["items"])
+@foreach (Furniture furniture in @Model.FurnitureList)
 {
-  <li><a href='/categories/@Model["category"].Id/items/@item.Id'>@item.Description</a></li>
+  <li><a href="">@furniture.Name</a></li>
 }
 </ol>
 
-<p><a href='/categories/@Model["category"].Id/items/new'>Add a new item</a></p>
-<p><a href='/categories'>Return to category list</a></p>
-<p><a href='/'>Return to Main Page</a></p> -->
+<p><a href='/room/@Model.Id/furniture/new'>Add a new furniture piece</a></p>
+<p><a href='/rooms'>Return to room list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

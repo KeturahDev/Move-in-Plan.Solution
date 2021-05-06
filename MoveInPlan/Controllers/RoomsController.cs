@@ -33,5 +33,14 @@ namespace MoveInPlan.Controllers
       Room selectedRoom = Room.Find(id);
       return View(selectedRoom);
     }
+
+    [HttpPost("rooms/{roomId}/furniture")]
+    public ActionResult Create(int roomId, string furnitureName)
+    {
+      Room chosenRoom = Room.Find(roomId);
+      Furniture newFurniture = new Furniture(furnitureName);
+      chosenRoom.AddRoom(newFurniture);
+      return View("Show", chosenRoom);
+    }
   }
 }
