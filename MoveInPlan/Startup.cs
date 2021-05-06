@@ -41,4 +41,8 @@ namespace MoveInPlan
       });
     }
   }
+  public static class DBConfiguration
+  {
+    public static string ConnectionString = "server=localhost;user id=root;password=epicodus;port=3306;database=move-in-plan;";
+  }
 }
